@@ -1,0 +1,83 @@
+<html>
+<body>
+<script>
+    let student = [
+        {
+        fullname: 'นายตั้งใจ เรียนมาก',
+        age: 18,
+        year: 1,
+        gpa: 3.40,
+        help: true,
+        birth: ' เกิดเมื่อปี 2546'
+        },
+        {
+        fullname: 'นายส่งงาน ตลอดมา',
+        age: 19,
+        year: 2,
+        gpa: 3.00,
+        help: false,
+        birth: ' เกิดเมื่อปี 2545'
+        },
+        {
+        fullname: 'นางสาวใส่ใจ ดีงาม',
+        age: 20,
+        year: 3,
+        gpa: 2.90,
+        help: true,
+        birth: ' เกิดเมื่อปี 2544'
+        }
+    ]
+
+    // ไม่จำกัดชั้นปี และได้เกรดเฉลี่ยสะสม 3.20 ขึ้นไป และช่วยงานภาควิชา
+    for (let i = 0; i < student.length; i++) 
+    {
+        if(student[i].gpa>3.20 && student[i].help==true)
+        {   
+            console.log(student[i].fullname + student[i].birth + " ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย")
+        }
+    }
+
+    // ชั้นปีที่2เป็นต้นไป ที่ช่วยงานภาควิชา และได้เกรดเฉลี่ยสะสม 2.75 ขึ้นไป
+    for(let j = 1; j < student.length; j++)
+    {
+        if(student[j].help==true && student[j].gpa>2.75)
+        {
+            console.log(student[j].fullname + student[j].birth + " ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย")
+        }
+        else
+        {
+            console.log(student[j].fullname + student[j].birth + " ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์ และยังไม่ได้ช่วยงานภาควิชาด้วย")
+        }
+    }
+
+    // สรุป
+    // ไม่จำกัดชั้นปี และได้เกรดเฉลี่ยสะสม 3.20 ขึ้นไป
+    
+    console.log("สรุปรายชื่อนักศึกษาที่ได้รับทุน")
+    for (let k = 0; k < student.length; k++) 
+    {
+        if(student[k].gpa>3.20 && student[k].help==true)
+        {   
+            console.log("ชั้นปีที่ " + student[k].year)
+            console.log(student[k].fullname +  " เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย")
+        }
+    }
+
+    // ชั้นปีที่2เป็นต้นไป ที่ช่วยงานภาควิชา และได้เกรดเฉลี่ยสะสม 2.75 ขึ้นไป
+    for(let l = 1; l < student.length; l++)
+    {
+        if(student[l].help==true && student[l].gpa>2.75)
+        {
+            console.log("ชั้นปีที่ " + student[l].year)
+            console.log(student[l].fullname + " เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย")
+        }
+        else
+        {
+            console.log("ชั้นปีที่ " + student[l].year)
+            console.log("ไม่มี")
+        }
+    }
+    
+</script>
+</body>
+</html>
